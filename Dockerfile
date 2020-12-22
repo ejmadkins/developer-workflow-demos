@@ -1,3 +1,4 @@
+
 FROM adoptopenjdk/openjdk11:alpine-slim
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
