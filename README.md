@@ -1,4 +1,4 @@
-## Dockerfile
+## Jib
 
 Run the application using Maven.
 ```sh
