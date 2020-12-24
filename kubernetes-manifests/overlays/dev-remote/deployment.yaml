@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  labels:
+    env: dev-remote
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - image: europe-west2-docker.pkg.dev/ejmadkins-dev-workflow-demos/remote-registry/hello-world
+        name: hello-world
