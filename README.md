@@ -1,5 +1,5 @@
 ## Developer Workflow Demos
-A set of developer workflow demos focused on the "inner loop" development loop.
+A set of developer workflow demos focused on the "inner loop" development.
 
 ### Pre-requisites
 - [Docker Desktop](https://docs.docker.com/docker-for-windows/kubernetes/) or [minikube](https://github.com/kubernetes/minikube) installed locally on your machine
