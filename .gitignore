@@ -160,5 +160,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
+# terraform files
+terraform/
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
