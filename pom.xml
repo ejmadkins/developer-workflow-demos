@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.dev-workflow</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>spring-boot-docker-0.0.1</version>
 	<name>demo</name>
 	<description>Demo project for GCP developer workflows</description>
 
