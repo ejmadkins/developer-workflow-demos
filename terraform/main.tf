@@ -20,11 +20,11 @@ resource "google_project_service" "gcp_services" {
   disable_dependent_services = true
 }
 
-resource "google_artifact_registry_repository" "hello-registry" {
+resource "google_artifact_registry_repository" "remote-registry" {
   provider = google-beta
   location = var.region
-  repository_id = "hello-registry"
-  description = "example docker repository"
+  project = var.project
+  repository_id = "remote-registry"
   format = "DOCKER"
 }
 
@@ -32,6 +32,7 @@ resource "google_container_cluster" "remote-dev-cluster" {
   name               = "remote-dev-cluster"
   location           = "europe-west2-a"
   initial_node_count = 3
+  project = var.project
 
   node_config {
     oauth_scopes = [
