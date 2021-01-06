@@ -7,8 +7,6 @@ terraform {
 }
 
 provider "google-beta" {
-
-  #credentials = file(var.credentials_file)
   project = var.project
   region = var.region
   zone = var.zone
@@ -30,3 +28,22 @@ resource "google_artifact_registry_repository" "hello-registry" {
   format = "DOCKER"
 }
 
+resource "google_container_cluster" "remote-dev-cluster" {
+  name               = "remote-dev-cluster"
+  location           = "europe-west2-a"
+  initial_node_count = 3
+
+  node_config {
+    oauth_scopes = [
+      "https://www.googleapis.com/auth/cloud-platform"
+    ]
+
+    metadata = {
+      disable-legacy-endpoints = "true"
+    }
+
+    labels = {
+      env = "dev"
+    }
+  }
+}
