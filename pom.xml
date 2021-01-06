@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-    <start-class>com.devworkflows.DemoApplication</start-class>
+    <start-class>com.devworkflow.demo.DemoApplication</start-class>
 	</properties>
 
 	<dependencies>
