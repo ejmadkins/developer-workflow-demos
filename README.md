@@ -10,7 +10,12 @@ Run the application using Maven.
 $ ./mvnw compile jib:dockerBuild -Dimage=dev-workflow:jib
 ```
 
-Run the application using Maven.
+Apply the Kubernetes manifests
 ```sh
-$ docker run -it -ePORT=8080 -p8080:8080 dev-workflow:jib
+$ kubectl apply -f kubernetes-manifests/
+```
+
+Get the service URL
+```sh
+$ minikube service --url hello-world
 ```
