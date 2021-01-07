@@ -15,5 +15,5 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: hello-world
+      - image: localhost:5000/dev-workflow:skaffold
         name: hello-world
