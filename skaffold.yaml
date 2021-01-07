@@ -1,0 +1,39 @@
+apiVersion: skaffold/v2beta2
+kind: Config
+metadata:
+  name: hello-world
+deploy:
+  kustomize:
+    paths:
+    - kubernetes-manifests/base
+profiles:
+  - name: local
+    build:
+      artifacts:
+        - image: localhost:5000/dev-workflow
+          context: .
+          jib: {}
+      local:
+        push: true
+      tagPolicy:
+        sha256: {}
+    deploy:
+      kubeContext: minikube
+      kustomize:
+        paths:
+        - kubernetes-manifests/overlays/dev-local
+  - name: remote
+    build:
+      artifacts:
+      - image: europe-west2-docker.pkg.dev/ejmadkins-2020-01-06-dev/remote-registry/dev-workflow
+        context: .
+        jib: {}
+      tagPolicy:
+        sha256: {}
+      googleCloudBuild:
+        projectId: ejmadkins-2020-01-06-dev
+    deploy:
+      kubeContext: gke_ejmadkins-2020-01-06-dev_europe-west2-a_remote-dev-cluster
+      kustomize:
+        paths:
+        - kubernetes-manifests/overlays/dev-remote
