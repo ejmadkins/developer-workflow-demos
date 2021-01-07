@@ -33,7 +33,7 @@ profiles:
       googleCloudBuild:
         projectId: ejmadkins-2020-01-06-dev
     deploy:
-      kubeContext: remote-dev-cluster
+      kubeContext: gke_ejmadkins-2020-01-06-dev_europe-west2-a_remote-dev-cluster
       kustomize:
         paths:
         - kubernetes-manifests/overlays/dev-remote
