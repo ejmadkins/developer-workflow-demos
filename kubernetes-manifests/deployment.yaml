@@ -15,5 +15,5 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: localhost:5000/dev-workflow:buildpacks
+      - image: localhost:5000/dev-workflow:jib
         name: hello-world
