@@ -10,7 +10,7 @@ profiles:
   - name: local
     build:
       artifacts:
-        - image: hello-world
+        - image: localhost:5000/dev-workflow
           context: .
           jib: {}
       local:
@@ -26,7 +26,7 @@ profiles:
   - name: remote
     build:
       artifacts:
-      - image: europe-west2-docker.pkg.dev/ejmadkins-dev-workflow-demos/remote-registry/hello-world
+      - image: europe-west2-docker.pkg.dev/ejmadkins-2020-01-06-dev/remote-registry/dev-workflow:skaffold
         context: .
         jib: {}
       tagPolicy:

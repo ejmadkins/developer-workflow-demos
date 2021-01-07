@@ -9,5 +9,5 @@ spec:
   template:
     spec:
       containers:
-      - image: europe-west2-docker.pkg.dev/ejmadkins-dev-workflow-demos/remote-registry/hello-world
+      - image: europe-west2-docker.pkg.dev/ejmadkins-2020-01-06-dev/remote-registry/dev-workflow:skaffold
         name: hello-world
