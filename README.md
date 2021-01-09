@@ -10,8 +10,6 @@ Build the container using docker
 ```sh
 $ mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 $ docker build -t dev-workflow:dockerfile .
-$ docker tag dev-workflow:dockerfile localhost:5000/dev-workflow:dockerfile
-$ docker push localhost:5000/dev-workflow:dockerfile
 ```
 
 Apply the Kubernetes manifests
