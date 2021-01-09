@@ -10,7 +10,7 @@ profiles:
   - name: local
     build:
       artifacts:
-        - image: localhost:5000/dev-workflow
+        - image: dev-workflow
           context: .
           jib: {}
       local:
