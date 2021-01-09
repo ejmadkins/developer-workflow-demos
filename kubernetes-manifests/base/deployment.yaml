@@ -15,6 +15,6 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: localhost:5000/dev-workflow:latest
+      - image: dev-workflow
         name: hello-world
         imagePullPolicy: Always
