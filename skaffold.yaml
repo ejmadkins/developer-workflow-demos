@@ -14,7 +14,7 @@ profiles:
           context: .
           jib: {}
       local:
-        push: true
+        push: false
       tagPolicy:
         sha256: {}
     deploy:
