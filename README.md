@@ -6,6 +6,7 @@ A set of developer workflow demos focused on the "inner loop" development.
 - A [Google Cloud Project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
 - [Artifact Registry](https://cloud.google.com/artifact-registry/docs/enable-service) and [Cloud Build](https://cloud.google.com/cloud-build/docs/quickstart-build) APIs enabled
 - Create an [Artifact Registry repository](https://cloud.google.com/artifact-registry/docs/manage-repos)
+- Execute ```eval $(minikube -p minikube docker-env)``` to use Minikube's Docker container registry
 
 ### Demos
 - [Dockerfile](../../tree/dockerfile)
