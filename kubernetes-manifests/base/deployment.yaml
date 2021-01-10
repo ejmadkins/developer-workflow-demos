@@ -17,4 +17,4 @@ spec:
       containers:
       - image: dev-workflow
         name: hello-world
-        imagePullPolicy: Always
+        imagePullPolicy: Never
