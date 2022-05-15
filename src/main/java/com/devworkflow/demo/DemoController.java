@@ -8,7 +8,7 @@ public class DemoController {
 
   @RequestMapping("/")
   public String index() {
-    return "Hello Skaffold";
+    return "Hello Cloud Code";
   }
 
 }
